@@ -1,0 +1,34 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - db/**
+    - config/**
+    - script/**
+    - vendor/**/*
+    - config/unicorn/*
+    - config/initializers/*
+    - tripfree_front/node_modules/**/*
+  TargetRubyVersion: 2.3
+
+# Use only ascii symbols in comments.
+AsciiComments:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+LineLength:
+  Max: 120 # default: 80
+
+MethodLength:
+  Max: 30 # default: 10
+
+Metrics/AbcSize:
+  Max: 25 # default: 15
+
+Rails:
+  Enabled: true

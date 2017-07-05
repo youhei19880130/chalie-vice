@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: chalie_vice_production
-  username: chalie_vice_api
-  password: <%= ENV['CHALIE-VICE-API_DATABASE_PASSWORD'] %>
+  database: heroku_61205593d4d43fe
+  username: b31efbd21dab1b
+  password: <%= ENV['DATABASE_PASSWORD'] %>

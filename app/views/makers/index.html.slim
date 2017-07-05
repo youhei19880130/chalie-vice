@@ -1,0 +1,14 @@
+p#notice
+  = notice
+h1
+  | Makers
+
+.pull-right
+  = form_for_filterrific @filterrific do |f|
+    = f.text_field(:search_query, class: 'filterrific-periodically-observed', placeholder: '検索')
+    = render_filterrific_spinner
+
+== render partial: 'makers/list'
+
+br
+= link_to 'New Maker', new_maker_path

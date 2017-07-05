@@ -1,0 +1,51 @@
+= form_for(maker) do |f|
+  - if maker.errors.any?
+    #error_explanation
+      h2
+        = pluralize(maker.errors.count, "error")
+        |  prohibited this maker from being saved:
+      ul
+        - maker.errors.full_messages.each do |message|
+          li
+            = message
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :person
+    = f.text_field :person
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :tel
+    = f.text_field :tel
+  .field
+    = f.label :tel_person
+    = f.text_field :tel_person
+  .field
+    = f.label :condition
+    = f.text_field :condition
+  .field
+    = f.label :payment_site
+    = f.text_field :payment_site
+  .field
+    = f.label :closing_date
+    = f.text_field :closing_date
+  .field
+    = f.label :bank_name
+    = f.text_field :bank_name
+  .field
+    = f.label :branch_name
+    = f.text_field :branch_name
+  .field
+    = f.label :bank_account_type
+    = f.text_field :bank_account_type
+  .field
+    = f.label :bank_account_number
+    = f.text_field :bank_account_number
+  .field
+    = f.label :remarks
+    = f.text_area :remarks
+  .actions
+    = f.submit

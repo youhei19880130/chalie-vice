@@ -1,0 +1,45 @@
+doctype html
+html
+  head
+    title
+      | ChalieViceApi
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    nav.navbar.navbar-default.navbar-static-top role="navigation" style="margin-bottom: 0"
+      .navbar-header
+        button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-collapse">
+          span.sr-only 'Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        = link_to 'Home', makers_path, class: "navbar-brand"
+
+      .navbar-default.sidebar role="navigation"
+        .sidebar-nav.navbar-collapse
+          ul.nav.in#side-menu
+            li.sidebar-search
+              /.input-group.custom-search-form
+                input.form-control type="text" placeholder="Search..."
+                span.input-group-btn
+                  button.btn.btn-default type="button"
+                    i.fa.fa-search
+              /li
+                a href="index.html" class="active"
+                  i.fa.fa-dashboard.fa-fw Dashboard
+              /li
+                a href="#"
+                  i.fa.fa-bar-chart-o.fa-fw Charts
+                  span.fa.arrow
+                  ul.nav.nav-second-level.collapse
+                    li
+                      a href="flot.html" Flot Charts
+                    li
+                      a href="morris.html" Morris.js Charts
+              li
+                = link_to makers_path do
+                  i.fa.fa-thumb-tack.fa-fw Makers
+
+    #page-wrapper
+      == yield

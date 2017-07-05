@@ -1,0 +1,57 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @maker.name
+p
+  strong
+    | Person:
+  = @maker.person
+p
+  strong
+    | Email:
+  = @maker.email
+p
+  strong
+    | Tel:
+  = @maker.tel
+p
+  strong
+    | Tel person:
+  = @maker.tel_person
+p
+  strong
+    | Condition:
+  = @maker.condition
+p
+  strong
+    | Payment site:
+  = @maker.payment_site
+p
+  strong
+    | Closing date:
+  = @maker.closing_date
+p
+  strong
+    | Bank name:
+  = @maker.bank_name
+p
+  strong
+    | Branch name:
+  = @maker.branch_name
+p
+  strong
+    | Bank account type:
+  = @maker.bank_account_type
+p
+  strong
+    | Bank account number:
+  = @maker.bank_account_number
+p
+  strong
+    | Remarks:
+  = @maker.remarks
+= link_to 'Edit', edit_maker_path(@maker)
+|  | 
+= link_to 'Back', makers_path

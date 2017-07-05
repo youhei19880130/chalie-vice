@@ -67,3 +67,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'nokogiri'
+gem 'filterrific'
+gem 'bootstrap_sb_admin_base_v2'
+gem 'slim-rails'
+gem 'kaminari'

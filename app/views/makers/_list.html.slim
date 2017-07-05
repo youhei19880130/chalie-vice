@@ -1,0 +1,67 @@
+#filterrific_results
+  table.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline
+    thead
+      tr
+        th
+          | Name
+        th
+          | Person
+        th
+          | Email
+        /th
+          | Tel
+        /th
+          | Tel person
+        /th
+          | Condition
+        /th
+          | Payment site
+        /th
+          | Closing date
+        /th
+          | Bank name
+        /th
+          | Branch name
+        /th
+          | Bank account type
+        /th
+          | Bank account number
+        /th
+          | Remarks
+        th[colspan="3"]
+    tbody
+      - @makers.each do |maker|
+        tr
+          td
+            = maker.name
+          td
+            = maker.person
+          td
+            = maker.email
+          /td
+            = maker.tel
+          /td
+            = maker.tel_person
+          /td
+            = maker.condition
+          /td
+            = maker.payment_site
+          /td
+            = maker.closing_date
+          /td
+            = maker.bank_name
+          /td
+            = maker.branch_name
+          /td
+            = maker.bank_account_type
+          /td
+            = maker.bank_account_number
+          /td
+            = maker.remarks
+          td
+            = link_to 'Show', maker
+          td
+            = link_to 'Edit', edit_maker_path(maker)
+          td
+            = link_to 'Destroy', maker, method: :delete, data: { confirm: 'Are you sure?' }
+  

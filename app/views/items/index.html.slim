@@ -1,11 +1,12 @@
-h1 style="margin-top: 0;" Makers
+h1 style="margin-top: 0;" Items
 
 .pull-right
   = form_for_filterrific @filterrific do |f|
     = f.text_field(:search_query, class: 'filterrific-periodically-observed', placeholder: '検索')
     = render_filterrific_spinner
 
-== render partial: 'makers/list'
+== render partial: 'items/list'
 
 br
-= link_to 'New Maker', new_maker_path
+
+= link_to 'New Item', new_item_path

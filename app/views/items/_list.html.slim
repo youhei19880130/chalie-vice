@@ -1,0 +1,26 @@
+#filterrific_results
+  table.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline
+    thead
+      tr
+        th Name
+        /th Chalievice item id
+        th Maker
+        th Category
+        /th Jan code
+        th Stock
+        th
+        th
+        th
+  
+    tbody
+      - @items.each do |item|
+        tr
+          td = item.name
+          /td = item.chalievice_item_id
+          td = item.maker.name
+          td = item.category
+          /td = item.jan_code
+          td = item.stock
+          td = link_to 'Show', item
+          td = link_to 'Edit', edit_item_path(item)
+          td = link_to 'Destroy', item, data: { confirm: 'Are you sure?' }, method: :delete

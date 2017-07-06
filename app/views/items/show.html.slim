@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @item.name
+p
+  strong Chalievice item:
+  = @item.chalievice_item_id
+p
+  strong Maker:
+  = @item.maker_id
+p
+  strong Category:
+  = @item.category
+p
+  strong Jan code:
+  = @item.jan_code
+p
+  strong Stock:
+  = @item.stock
+
+= link_to 'Edit', edit_item_path(@item)
+'  |
+= link_to 'Back', items_path

@@ -7,6 +7,7 @@
         th Maker
         th Category
         /th Jan code
+        /th Price
         th Stock
         th
         th
@@ -20,6 +21,7 @@
           td = item.maker.name
           td = item.category
           /td = item.jan_code
+          /td = item.price
           td = item.stock
           td = link_to 'Show', item
           td = link_to 'Edit', edit_item_path(item)

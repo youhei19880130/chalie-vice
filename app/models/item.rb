@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   belongs_to :maker
+  has_many :orders, primary_key: :chalievice_item_id, foreign_key: :chalievice_item_id
 
   scope :sorted_by, -> (sort_key) { order(sort_key) }
   scope :search_query, -> (query) { where('items.name LIKE (?)', "%#{query}%")

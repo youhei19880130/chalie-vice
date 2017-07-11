@@ -14,7 +14,7 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
-        = link_to 'Home', makers_path, class: "navbar-brand"
+        = link_to 'Home', '/', class: "navbar-brand"
 
       .navbar-default.sidebar role="navigation"
         .sidebar-nav.navbar-collapse
@@ -45,4 +45,8 @@ html
                   i.fa.fa-thumb-tack.fa-fw Makers
 
     #page-wrapper
+      - if flash.present?
+        - flash.each do |key, value|
+          = content_tag(:div, value, class: "row alert alert-#{key}")
+
       == yield

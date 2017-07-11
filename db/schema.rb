@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706051058) do
+ActiveRecord::Schema.define(version: 20170711162656) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20170706051058) do
     t.integer  "maker_id"
     t.string   "category"
     t.string   "jan_code"
+    t.integer  "price"
     t.integer  "stock",              default: 0
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
@@ -45,6 +46,22 @@ ActiveRecord::Schema.define(version: 20170706051058) do
     t.text     "remarks",             limit: 65535
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
+  end
+
+  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "order_code"
+    t.integer  "branch_no"
+    t.integer  "chalievice_item_id"
+    t.string   "item_name"
+    t.string   "receiver_zip_code"
+    t.string   "receiver_address"
+    t.string   "receiver_name"
+    t.string   "receiver_tel"
+    t.string   "remarks"
+    t.string   "delivery_company_code"
+    t.string   "delivery_slip_code"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end

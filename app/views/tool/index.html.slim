@@ -1,0 +1,10 @@
+.row
+  h1.page-header 運用ツール
+
+.row
+  .panel.panel-default
+    .panel-heading Chalie Vice
+    .panel-body
+      = form_tag({controller: "tool", action: "order", method: "post"}, {multipart: true}) do
+        = file_field_tag :file
+        = submit_tag 'オーダー処理実行'

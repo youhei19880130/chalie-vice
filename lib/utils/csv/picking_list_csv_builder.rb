@@ -35,11 +35,21 @@ module Utils
             record.order_code = columns[0]
             record.receiver_name = columns[1]
             record.jan_code = columns[2]
-            record.item_name = columns[3]
+            item_name = case
+                        when columns[4].present? && columns[5].present?
+                          "#{columns[3]}(#{columns[5]}・#{columns[4]})"
+                        when columns[4].present? && columns[5].blank?
+                          "#{columns[3]}(#{columns[4]})"
+                        when columns[4].blank? && columns[5].present?
+                          "#{columns[3]}(#{columns[5]})"
+                        else
+                          columns[3]
+                        end
+            record.item_name = item_name
             record.count = count
             record.supplied_items = '納品書'
-            record.remarks = columns[4]
-            record.price = columns[5]
+            record.remarks = columns[6]
+            record.price = columns[7]
             @records << record.to_csv
           end
           @records.join("\n")

@@ -12,7 +12,8 @@ class ToolController < ApplicationController
 
     # picking list
     logger.info('START: export picking list')
-    picking_lists = Order.where('orders.id > ?', last_index).includes(:item).references(:item).group(:order_code, :receiver_name, :jan_code, :item_name, :remarks, :price).count
+    picking_lists = Order.where('orders.id > ?', last_index).includes(:item).references(:item).group(:order_code, :receiver_name, :jan_code, :name, :size, :color, :remarks, :price).count
+    logger.info(picking_lists)
     csv = Utils::Csv::PickingListCsvBuilder::PickingListCsvOutput.new
     send_data(csv.output(picking_lists).encode(Encoding::SJIS), filename: 'picking_list.csv', disposition: 'attachment')
     logger.info('FINISH: export picking list')

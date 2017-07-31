@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720051339) do
+ActiveRecord::Schema.define(version: 20170731085047) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170720051339) do
     t.integer  "maker_id"
     t.string   "category"
     t.string   "jan_code"
+    t.string   "house_jan_code"
     t.integer  "price"
     t.integer  "stock",              default: 0
     t.datetime "created_at",                     null: false

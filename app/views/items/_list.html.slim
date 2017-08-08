@@ -1,14 +1,16 @@
-#filterrific_results
+div#filterrific_results
   table.table.table-striped.table-bordered.table-hover.dataTable.no-footer.dtr-inline
     thead
       tr
-        th Name
-        /th Chalievice item id
-        th Maker
-        th Category
+        th 商品名
+        th サイズ
+        th カラー
+        /th Chalevice item id
+        th 仕入先
+        th カテゴリー
         /th Jan code
         /th Price
-        th Stock
+        th 在庫数
         th
         th
         th
@@ -17,6 +19,8 @@
       - @items.each do |item|
         tr
           td = item.name
+          td = item.size
+          td = item.color
           /td = item.chalievice_item_id
           td = item.maker.name
           td = item.category
@@ -26,3 +30,4 @@
           td = link_to 'Show', item
           td = link_to 'Edit', edit_item_path(item)
           td = link_to 'Destroy', item, data: { confirm: 'Are you sure?' }, method: :delete
+= paginate @items

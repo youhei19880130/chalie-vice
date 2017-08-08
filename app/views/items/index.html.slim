@@ -1,7 +1,7 @@
 .row
   h1.page-header Listing Items
 
-.pull-right
+div.pull-right
   = form_for_filterrific @filterrific do |f|
     = f.text_field(:search_query, class: 'filterrific-periodically-observed', placeholder: '検索')
     = render_filterrific_spinner

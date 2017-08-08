@@ -9,7 +9,7 @@ html
   body
     nav.navbar.navbar-default.navbar-static-top role="navigation" style="margin-bottom: 0"
       .navbar-header
-        button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-collapse"
           span.sr-only 'Toggle navigation
             span.icon-bar
             span.icon-bar
@@ -39,10 +39,10 @@ html
                       a href="morris.html" Morris.js Charts
               li
                 = link_to items_path do
-                  i.fa.fa-gift.fa-fw Items
+                  i.fa.fa-gift.fa-fw &nbsp;Items
               li
                 = link_to makers_path do
-                  i.fa.fa-thumb-tack.fa-fw Makers
+                  i.fa.fa-thumb-tack.fa-fw &nbsp;Makers
 
     #page-wrapper
       - if flash.present?

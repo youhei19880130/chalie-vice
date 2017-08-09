@@ -14,4 +14,10 @@ class Item < ApplicationRecord
         :search_query,
       ]
   )
+
+  enum ship_from_location: {
+    no_select: 0,
+    maker: 1,
+    arts: 2,
+  }
 end

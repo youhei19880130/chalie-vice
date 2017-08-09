@@ -1,56 +1,43 @@
 p#notice
   = notice
 p
-  strong
-    | Name:
+  strong メーカー名:
   = @maker.name
 p
-  strong
-    | Person:
+  strong 担当者:
   = @maker.person
 p
-  strong
-    | Email:
+  strong 担当者メールアドレス:
   = @maker.email
 p
-  strong
-    | Tel:
+  strong 電話番号(会社):
   = @maker.tel
 p
-  strong
-    | Tel person:
+  strong 電話番号(携帯):
   = @maker.tel_person
 p
-  strong
-    | Condition:
+  strong 条件:
   = @maker.condition
 p
-  strong
-    | Payment site:
+  strong 支払サイト:
   = @maker.payment_site
 p
-  strong
-    | Closing date:
+  strong 締め日:
   = @maker.closing_date
 p
-  strong
-    | Bank name:
+  strong 銀行名:
   = @maker.bank_name
 p
-  strong
-    | Branch name:
+  strong 支店名:
   = @maker.branch_name
 p
-  strong
-    | Bank account type:
+  strong 口座種別:
   = @maker.bank_account_type
 p
-  strong
-    | Bank account number:
+  strong 口座番号:
   = @maker.bank_account_number
 p
-  strong
-    | Remarks:
+  strong 備考:
   = @maker.remarks
 = link_to 'Edit', edit_maker_path(@maker)
 |  | 

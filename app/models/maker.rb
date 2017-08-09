@@ -11,4 +11,9 @@ class Maker < ApplicationRecord
         :search_query,
       ]
   )
+
+  enum ship_from_location: {
+    maker: 1,
+    arts: 2,
+  }
 end

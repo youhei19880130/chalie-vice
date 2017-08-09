@@ -78,6 +78,6 @@ class MakersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def maker_params
-      params.require(:maker).permit(:name, :person, :email, :tel, :tel_person, :condition, :payment_site, :closing_date, :bank_name, :branch_name, :bank_account_type, :bank_account_number, :remarks)
+      params.require(:maker).permit(:name, :person, :email, :tel, :tel_person, :condition, :payment_site, :closing_date, :bank_name, :branch_name, :bank_account_type, :bank_account_number, :ship_from_location, :remarks)
     end
 end

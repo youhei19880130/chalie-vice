@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731085047) do
+ActiveRecord::Schema.define(version: 20170809003216) do
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "image"
@@ -28,9 +28,10 @@ ActiveRecord::Schema.define(version: 20170731085047) do
     t.string   "jan_code"
     t.string   "house_jan_code"
     t.integer  "price"
-    t.integer  "stock",              default: 0
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.integer  "stock",                        default: 0
+    t.integer  "ship_from_location", limit: 2, default: 0
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
   end
 
   create_table "makers", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -46,9 +47,10 @@ ActiveRecord::Schema.define(version: 20170731085047) do
     t.string   "branch_name"
     t.string   "bank_account_type"
     t.string   "bank_account_number"
+    t.integer  "ship_from_location",  limit: 2,     default: 0
     t.text     "remarks",             limit: 65535
-    t.datetime "created_at",                        null: false
-    t.datetime "updated_at",                        null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
   end
 
   create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

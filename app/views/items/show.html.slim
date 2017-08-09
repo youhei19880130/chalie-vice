@@ -1,31 +1,34 @@
 p#notice = notice
 
 p
-  strong Name:
+  strong 商品名:
   = @item.name
 p
-  strong Size:
+  strong サイズ:
   = @item.size
 p
-  strong Color:
+  strong カラー:
   = @item.color
 p
-  strong Chalievice item:
+  strong Chalie Vice 商品ID:
   = @item.chalievice_item_id
 p
-  strong Maker:
-  = @item.maker_id
+  strong メーカー名:
+  = @item.maker.name
 p
-  strong Category:
+  strong カテゴリー:
   = @item.category
 p
-  strong Jan code:
+  strong JANコード:
   = @item.jan_code
 p
-  strong House_jan code:
+  strong ハウスJANコード:
   = @item.house_jan_code
 p
-  strong Stock:
+  strong 発送元:
+  = @item.ship_from_location
+p
+  strong 在庫数:
   = @item.stock
 
 = link_to 'Edit', edit_item_path(@item)

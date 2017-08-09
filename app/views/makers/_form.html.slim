@@ -9,43 +9,46 @@
           li
             = message
   .field
-    = f.label :name
+    = f.label 'メーカー名'
     = f.text_field :name
   .field
-    = f.label :person
+    = f.label '担当者'
     = f.text_field :person
   .field
-    = f.label :email
+    = f.label '担当者メールアドレス'
     = f.text_field :email
   .field
-    = f.label :tel
+    = f.label '電話番号(会社)'
     = f.text_field :tel
   .field
-    = f.label :tel_person
+    = f.label '電話番号(携帯)'
     = f.text_field :tel_person
   .field
-    = f.label :condition
+    = f.label '条件'
     = f.text_field :condition
   .field
-    = f.label :payment_site
+    = f.label '支払サイト'
     = f.text_field :payment_site
   .field
-    = f.label :closing_date
+    = f.label '締め日'
     = f.text_field :closing_date
   .field
-    = f.label :bank_name
+    = f.label '銀行名'
     = f.text_field :bank_name
   .field
-    = f.label :branch_name
+    = f.label '支店名'
     = f.text_field :branch_name
   .field
-    = f.label :bank_account_type
+    = f.label '口座種別'
     = f.text_field :bank_account_type
   .field
-    = f.label :bank_account_number
+    = f.label '口座番号'
     = f.text_field :bank_account_number
   .field
-    = f.label :remarks
+    = f.label '発送元'
+    = f.select :ship_from_location, Item.ship_from_locations.map{|key, value| [key, value]}
+  .field
+    = f.label '備考'
     = f.text_area :remarks
   .actions
     = f.submit

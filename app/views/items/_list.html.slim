@@ -8,7 +8,7 @@ div#filterrific_results
         /th Chalevice item id
         th メーカー名
         th カテゴリー
-        /th Jan code
+        th Jan code
         /th Price
         th 在庫数
         th
@@ -22,9 +22,9 @@ div#filterrific_results
           td = item.size
           td = item.color
           /td = item.chalievice_item_id
-          td = item.maker.name
+          td = item&.maker&.name
           td = item.category
-          /td = item.jan_code
+          td = item.jan_code
           /td = item.price
           td = item.stock
           td = link_to 'Show', item

@@ -1,0 +1,2 @@
+module ChalieVice::ItemsHelper
+end

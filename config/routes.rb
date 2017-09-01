@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  namespace :chalie_vice do
+    resources :items
+  end
   root 'tool#index'
 
   resources :items

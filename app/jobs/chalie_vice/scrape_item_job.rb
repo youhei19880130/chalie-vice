@@ -8,6 +8,8 @@ module ChalieVice
 
       title = xpath_text(doc, '/html/body/div[2]/section/section/div/div[2]/div/h1')
       logger.info("title: #{title}")
+      variation = xpath_text(doc, '//*[@id="variations"]')
+      logger.info("variations: #{variation}")
       description = xpath_text(doc, '/html/body/div[2]/section/section/div/div[2]/div/p/section[1]')
       logger.info("description: #{description}")
       detail = doc.xpath('/html/body/div[2]/section/section/div/div[2]/div/p/section[2]/div')

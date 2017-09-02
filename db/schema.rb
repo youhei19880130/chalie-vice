@@ -10,25 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170828182013) do
+ActiveRecord::Schema.define(version: 20170902051558) do
 
   create_table "chalie_vice_item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "item_id"
-    t.string   "url",        null: false
+    t.string   "image",      null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_chalie_vice_item_images_on_item_id", using: :btree
   end
 
   create_table "chalie_vice_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                          null: false
-    t.integer  "price",                         null: false
-    t.string   "category_name",                 null: false
-    t.text     "description",     limit: 65535
+    t.string   "name",                        null: false
+    t.integer  "price",                       null: false
+    t.string   "category_name",               null: false
+    t.text     "description",   limit: 65535
     t.string   "youtube_url"
-    t.string   "thumb_image_url",               null: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "chalie_vice_letter_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -41,16 +40,15 @@ ActiveRecord::Schema.define(version: 20170828182013) do
   end
 
   create_table "chalie_vice_letters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string   "name",                                       null: false
-    t.string   "category_name",                              null: false
-    t.string   "thumb_image_url",                            null: false
-    t.text     "body",            limit: 65535
-    t.string   "url",                                        null: false
-    t.string   "qr_code_url",                                null: false
-    t.string   "friend_name",                   default: ""
-    t.string   "friend_title",                  default: ""
-    t.datetime "created_at",                                 null: false
-    t.datetime "updated_at",                                 null: false
+    t.string   "name",                                     null: false
+    t.string   "category_name",                            null: false
+    t.text     "body",          limit: 65535
+    t.string   "url",                                      null: false
+    t.string   "friend_name",                 default: ""
+    t.string   "friend_title",                default: ""
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "thumb_image"
   end
 
   create_table "images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

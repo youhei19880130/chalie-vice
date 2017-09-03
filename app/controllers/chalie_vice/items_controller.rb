@@ -4,7 +4,7 @@ class ChalieVice::ItemsController < ApplicationController
   # GET /chalie_vice/items
   # GET /chalie_vice/items.json
   def index
-    @chalie_vice_items = ChalieVice::Item.all.includes(:item_images).references(:item_images).where('detail is not null') # for development
+    @chalie_vice_items = ChalieVice::Item.all.includes(:item_images).references(:item_images).order('chalie_vice_items.id desc')
   end
 
   # GET /chalie_vice/items/1

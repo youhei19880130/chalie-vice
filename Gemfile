@@ -72,5 +72,7 @@ gem 'bootstrap_sb_admin_base_v2'
 gem 'slim-rails'
 gem 'kaminari'
 gem 'activerecord-import'
-gem 'carrierwave'
 gem 'fog'
+# Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
+gem 'carrierwave'
+gem 'rmagick'

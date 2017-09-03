@@ -3,6 +3,9 @@ h1 Listing chalie_vice_items
 table
   thead
     tr
+      th Name
+      th Image
+      th Thumbnail
       th
       th
       th
@@ -10,6 +13,11 @@ table
   tbody
     - @chalie_vice_items.each do |chalie_vice_item|
       tr
+        td chalie_vice_item.name
+        td 
+          = chalie_vice_item.item_images.each do |image|
+            = image_tag image.image.url
+        td = image_tag chalie_vice_item.item_images.first.image.thumb.url
         td = link_to 'Show', chalie_vice_item
         td = link_to 'Edit', edit_chalie_vice_item_path(chalie_vice_item)
         td = link_to 'Destroy', chalie_vice_item, data: { confirm: 'Are you sure?' }, method: :delete

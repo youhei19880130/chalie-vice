@@ -4,7 +4,7 @@ class ChalieVice::ItemsController < ApplicationController
   # GET /chalie_vice/items
   # GET /chalie_vice/items.json
   def index
-    @chalie_vice_items = ChalieVice::Item.all
+    @chalie_vice_items = ChalieVice::Item.all.joins(:item_images).select('*')
   end
 
   # GET /chalie_vice/items/1

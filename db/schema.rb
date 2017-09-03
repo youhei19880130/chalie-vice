@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170902051558) do
+ActiveRecord::Schema.define(version: 20170903033228) do
 
   create_table "chalie_vice_item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "item_id"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20170902051558) do
     t.integer  "price",                       null: false
     t.string   "category_name",               null: false
     t.text     "description",   limit: 65535
+    t.text     "detail",        limit: 65535
+    t.string   "url"
     t.string   "youtube_url"
     t.datetime "created_at",                  null: false
     t.datetime "updated_at",                  null: false

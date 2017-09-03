@@ -1,0 +1,2 @@
+module ChalieVice::LettersHelper
+end

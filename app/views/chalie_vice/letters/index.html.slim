@@ -1,0 +1,19 @@
+h1 Listing chalie_vice_letters
+
+table
+  thead
+    tr
+      th
+      th
+      th
+
+  tbody
+    - @chalie_vice_letters.each do |chalie_vice_letter|
+      tr
+        td = link_to 'Show', chalie_vice_letter
+        td = link_to 'Edit', edit_chalie_vice_letter_path(chalie_vice_letter)
+        td = link_to 'Destroy', chalie_vice_letter, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Letter', new_chalie_vice_letter_path

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170903061646) do
+ActiveRecord::Schema.define(version: 20170903115422) do
 
   create_table "chalie_vice_item_images", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "item_id"
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 20170903061646) do
   end
 
   create_table "chalie_vice_letter_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "letters_id"
-    t.integer  "items_id"
+    t.integer  "letter_id"
+    t.integer  "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["items_id"], name: "index_chalie_vice_letter_items_on_items_id", using: :btree
-    t.index ["letters_id"], name: "index_chalie_vice_letter_items_on_letters_id", using: :btree
+    t.index ["item_id"], name: "index_chalie_vice_letter_items_on_item_id", using: :btree
+    t.index ["letter_id"], name: "index_chalie_vice_letter_items_on_letter_id", using: :btree
   end
 
   create_table "chalie_vice_letters", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|

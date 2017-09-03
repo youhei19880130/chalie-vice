@@ -4,7 +4,13 @@ class ChalieVice::LettersController < ApplicationController
   # GET /chalie_vice/letters
   # GET /chalie_vice/letters.json
   def index
-    @chalie_vice_letters = ChalieVice::Letter.all
+    if params[:category] == 'FROM+CHALIE'
+      @chalie_vice_letters = ChalieVice::Letter.where(category_name: 'FROM CHALIE')
+    elsif params[:category] == 'FROM+FRIENDS'
+      @chalie_vice_letters = ChalieVice::Letter.where(category_name: 'FROM FRIENDS')
+    else
+      @chalie_vice_letters = ChalieVice::Letter.all
+    end
   end
 
   # GET /chalie_vice/letters/1

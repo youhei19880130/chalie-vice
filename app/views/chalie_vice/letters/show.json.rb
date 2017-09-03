@@ -1,5 +1,6 @@
 {
   id: @chalie_vice_letter.id,
+  category_name: @chalie_vice_letter.category_name,
   name: @chalie_vice_letter.name,
   category_name: @chalie_vice_letter.category_name,
   body: @chalie_vice_letter.body,
